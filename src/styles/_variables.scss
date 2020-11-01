@@ -1,0 +1,29 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+$theme-font-head: "Yanone Kaffeesatz", sans-serif;
+$theme-font-body: "Raleway", sans-serif;
+
+$font-size-regular: 14px;
+$font-size-h1: 46px;
+$font-size-h2: 32px;
+$font-size-h3: 24px;
+$font-size-h4: 14px;
+
+$lightest: 200;
+$light: 300;
+$normal: 400;
+$bold: 500;
+$boldest: 700;
+
+$nav-height: 50px;
+
+@mixin row {
+	display: flex;
+	position: relative;
+	justify-content: space-around;
+	align-items: center;
+}

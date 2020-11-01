@@ -1,0 +1,153 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+@use "../../../../styles/colors" as colors;
+@use "../../../../styles/variables" as variables;
+@use "../../../../styles/media-queries" as media-queries;
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 95vh;
+	position: relative;
+	width: 100%;
+	background-image: url("../../../../../public/images/mine/bp-bridge.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.color-overlay {
+		position: absolute;
+		background-color: colors.$primary-dark;
+		filter: opacity(0.2);
+		width: 100%;
+		height: 100%;
+	}
+
+	.background-box {
+		background-color: colors.$primary-dark;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+		border-radius: 4px;
+	}
+
+	h1.background-box {
+		@extend .background-box;
+		padding: 10px 16px 0px 16px;
+	}
+
+	h2.background-box {
+		@extend .background-box;
+		padding: 6px 16px 4px 16px;
+	}
+
+	h1 {
+		font-size: 66px;
+		font-weight: bolder;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+	}
+
+	h2 {
+		max-width: 45%;
+	}
+}
+
+.philosophy {
+	position: relative;
+	background-image: url("../../../../../public/images/others/flm-blur.png");
+	background-position-y: -400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.color-overlay {
+		position: absolute;
+		background-color: colors.$grey-base;
+		filter: opacity(0.4);
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	.row-1 {
+		display: flex;
+		position: relative;
+		justify-content: space-around;
+		align-items: center;
+		padding: 40px 10px;
+
+		.image-container {
+			max-width: 30%;
+			overflow: hidden;
+			z-index: 2;
+
+			img {
+				width: 100%;
+				border-radius: 300px;
+			}
+		}
+
+		.text-container {
+			max-width: 70%;
+			z-index: 2;
+
+			.software-list {
+				font-size: variables.$font-size-h3;
+				font-family: variables.$theme-font-body;
+				font-style: italic;
+			}
+		}
+	}
+
+	.paragraph-container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		p {
+			z-index: 2;
+			text-align: center;
+			max-width: 70%;
+			color: colors.$text-light;
+		}
+	}
+}
+
+.more-info {
+	position: relative;
+	/*
+		Background photo credit: Nick Kelly / Faithlife Corporation / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)
+	*/
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/eb/Downtown_Bellingham%2C_Washington.jpg");
+	background-position-y: -400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 10;
+
+	div {
+		z-index: inherit;
+	}
+
+	.color-overlay {
+		position: absolute;
+		background-color: colors.$grey-base;
+		filter: opacity(0.4);
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	.row-1,
+	.row-2 {
+		@include variables.row;
+	}
+
+	.row-2 {
+		max-height: 60px;
+	}
+}
