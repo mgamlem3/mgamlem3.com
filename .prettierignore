@@ -13,3 +13,4 @@ LICENSE
 .travis.yml
 .next
 next-env.d.ts
+storybook-static/

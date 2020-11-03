@@ -7,6 +7,7 @@
 import React from "react";
 
 import { Twitter, GitHub, LinkedIn } from "../../../../icons";
+import Profile from "../../../../../public/images/mine/profile.jpg";
 
 import "./styles.scss";
 
@@ -26,10 +27,7 @@ const HomeContent: React.FunctionComponent = () => {
 					<div className='color-overlay' />
 					<div className='row-1'>
 						<div className='image-container'>
-							<img
-								src='/images/mine/profile.jpg'
-								loading='lazy'
-							/>
+							<img src={Profile} loading='lazy' />
 						</div>
 						<div className='text-container'>
 							<h2>I think software should be:</h2>

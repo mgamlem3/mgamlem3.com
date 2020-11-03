@@ -14,7 +14,7 @@ const Page: React.FunctionComponent = ({ children }) => {
 	return (
 		<React.Fragment>
 			<Nav />
-			<div>{children}</div>
+			<div className='app'>{children}</div>
 		</React.Fragment>
 	);
 };
