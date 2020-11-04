@@ -10,7 +10,7 @@ import { Story } from "@storybook/react/types-6-0";
 import { Home } from "../index";
 
 export default {
-	title: "Home",
+	title: "Pages/Home",
 	component: Home,
 };
 
