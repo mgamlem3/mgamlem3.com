@@ -6,9 +6,13 @@
 
 import React from "react";
 
+const light = "#ffffff";
+const dark = "#000000";
+
 interface IconProps {
 	width?: number;
 	height?: number;
+	color?: string;
 }
 
 /*
@@ -18,6 +22,7 @@ interface IconProps {
 export const Twitter: React.FunctionComponent<IconProps> = ({
 	width = 32,
 	height = 32,
+	color = "",
 }) => {
 	return (
 		<div style={{ width: `${width}px`, height: `${height}px` }}>
@@ -40,7 +45,7 @@ export const Twitter: React.FunctionComponent<IconProps> = ({
 						<use
 							href='#ary7CI9Lw'
 							opacity='1'
-							fill='#1da1f2'
+							fill={getTwitterColor(color)}
 							fillOpacity='1'
 						></use>
 						<g>
@@ -60,6 +65,13 @@ export const Twitter: React.FunctionComponent<IconProps> = ({
 	);
 };
 
+function getTwitterColor(color: string): string {
+	if (!color || color === "default") return "#1da1f2";
+	else if (color === "light") return light;
+	else if (color === "dark") return dark;
+	return "#1da1f2";
+}
+
 /*
  * svg taken from https://linkedin.com/feed header
  * offical download available at https://brand.linkedin.com/downloads
@@ -67,6 +79,7 @@ export const Twitter: React.FunctionComponent<IconProps> = ({
 export const LinkedIn: React.FunctionComponent<IconProps> = ({
 	width = 32,
 	height = 32,
+	color = "",
 }) => {
 	return (
 		<svg
@@ -81,7 +94,7 @@ export const LinkedIn: React.FunctionComponent<IconProps> = ({
 			<g transform='scale(.7083)' fill='none' fillRule='evenodd'>
 				<rect
 					className='bug-text-color'
-					fill='#FFF'
+					fill={getLinkedInColor(color, false)}
 					x='1'
 					y='1'
 					width='46'
@@ -91,12 +104,23 @@ export const LinkedIn: React.FunctionComponent<IconProps> = ({
 				<path
 					d='M0 4.01A4.01 4.01 0 014.01 0h39.98A4.01 4.01 0 0148 4.01v39.98A4.01 4.01 0 0143.99 48H4.01A4.01 4.01 0 010 43.99V4.01zM19 18.3h6.5v3.266C26.437 19.688 28.838 18 32.445 18 39.359 18 41 21.738 41 28.597V41.3h-7V30.159c0-3.906-.937-6.109-3.32-6.109-3.305 0-4.68 2.375-4.68 6.109V41.3h-7v-23zM7 41h7V18H7v23zm8-30.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z'
 					className='background'
-					fill='#0077B5'
+					fill={getLinkedInColor(color, true)}
 				></path>
 			</g>
 		</svg>
 	);
 };
+
+function getLinkedInColor(color: string, primary: boolean): string {
+	if (primary) {
+		if (!color || color === "default") return "#0077B5";
+		else if (color === "light") return light;
+		else return dark;
+	} else {
+		if (color !== "default") return "";
+		else return light;
+	}
+}
 
 /*
  * svg taken from https://github.com/logos header
@@ -105,6 +129,7 @@ export const LinkedIn: React.FunctionComponent<IconProps> = ({
 export const GitHub: React.FunctionComponent<IconProps> = ({
 	width = 32,
 	height = 32,
+	color = "",
 }) => {
 	return (
 		<svg
@@ -114,6 +139,7 @@ export const GitHub: React.FunctionComponent<IconProps> = ({
 			version='1.1'
 			width={width}
 			aria-hidden='true'
+			fill={getGitHubColor(color)}
 		>
 			<path
 				fillRule='evenodd'
@@ -122,3 +148,9 @@ export const GitHub: React.FunctionComponent<IconProps> = ({
 		</svg>
 	);
 };
+
+function getGitHubColor(color: string): string {
+	if (!color || color === "default" || color === "dark") return dark;
+	else if (color === "light") return light;
+	return dark;
+}
