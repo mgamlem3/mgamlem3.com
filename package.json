@@ -9,9 +9,9 @@
 	"scripts": {
 		"dev": "webpack serve",
 		"prebuild": "yarn lint",
-		"build": "rm -rf dist && webpack --mode production --config webpack.prod.config.js",
+		"build": "rm -rf dist && webpack --mode production --config webpack.prod.config.js && webpack --mode production --config webpack.server.config.js",
 		"test": "yarn prettier-check; yarn build",
-		"start": "node ./dist/main.wp.js",
+		"start": "node ./dist/server.*.wp.js",
 		"prettier": "prettier --config ./.prettierrc --ignore-path  ./.prettierignore --write \"**/*.ts*\" \"**/*.js\" \"**/*.scss\" \"*.json\" \"*.md\"",
 		"prettier-check": "prettier --list-different \"{*.js, *.md,./{src}/**/*.ts?(x)}\"",
 		"lint": "yarn prettier; yarn eslint; yarn stylelint",
@@ -23,6 +23,7 @@
 		"snapshot": "build-storybook && percy-storybook --widths=320,1280"
 	},
 	"dependencies": {
+		"express": "^4.17.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-router-dom": "^5.1.2"
@@ -38,6 +39,7 @@
 		"@storybook/addon-links": "^6.0.28",
 		"@storybook/preset-scss": "^1.0.3",
 		"@storybook/react": "^6.0.28",
+		"@types/express": "^4.17.8",
 		"@types/node": "^14.11.7",
 		"@types/react": "^16.9.51",
 		"@types/react-dom": "^16.9.6",
