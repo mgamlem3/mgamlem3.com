@@ -10,7 +10,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const compressionRegex = /\.(js|png|jpg|html|css)$/;
 
@@ -61,13 +61,7 @@ module.exports = {
 				},
 			},
 		},
-		minimizer: [
-			new UglifyJsPlugin({
-				cache: true,
-				parallel: true,
-			}),
-			new OptimizeCSSAssetsPlugin({}),
-		],
+		minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

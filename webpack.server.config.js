@@ -7,7 +7,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const SERVER_PATH = path.join(__dirname, "/server/server.ts");
 
@@ -48,11 +48,6 @@ module.exports = {
 				},
 			},
 		},
-		minimizer: [
-			new UglifyJsPlugin({
-				cache: true,
-				parallel: true,
-			}),
-		],
+		minimizer: [new TerserPlugin()],
 	},
 };
