@@ -6,7 +6,6 @@
 
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
-const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
@@ -45,6 +44,7 @@ module.exports = {
 		extensions: [".tsx", ".ts", ".js"],
 	},
 	output: {
+		globalObject: "this",
 		path: path.resolve(__dirname, "dist/"),
 		publicPath: "/",
 		filename: "main.[contenthash].wp.js",
@@ -69,17 +69,11 @@ module.exports = {
 			new OptimizeCSSAssetsPlugin({}),
 		],
 	},
-	devServer: {
-		contentBase: path.join(__dirname, "public/"),
-		port: 3000,
-		publicPath: "/",
-		historyApiFallback: true,
-		hotOnly: true,
-	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: "mgamlem3.com",
 			minify: true,
+			template: "./public/index.html",
 		}),
 		new MiniCssExtractPlugin({
 			filename: "[hash].css",
