@@ -13,6 +13,8 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
+const compressionRegex = /\.(js|png|jpg|html|css)$/;
+
 module.exports = {
 	mode: "production",
 	entry: path.join(__dirname, "/src/index.tsx"),
@@ -88,6 +90,12 @@ module.exports = {
 			cache: true,
 			filename: "[path][base].br",
 			algorithm: "brotliCompress",
+			test: compressionRegex,
+		}),
+		new CompressionPlugin({
+			cache: true,
+			filename: "[path][base].gz",
+			test: compressionRegex,
 		}),
 	],
 };
