@@ -22,6 +22,11 @@
 		"build-storybook": "build-storybook --no-dll",
 		"snapshot": "build-storybook && percy-storybook --widths=320,1280"
 	},
+	"browsersList": [
+		"last 2 versions",
+		"not dead",
+		"> 0.2%"
+	],
 	"dependencies": {
 		"express": "^4.17.1",
 		"react": "^17.0.1",
