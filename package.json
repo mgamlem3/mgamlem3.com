@@ -8,7 +8,7 @@
 	"private": false,
 	"scripts": {
 		"dev": "webpack serve",
-		"prebuild": "yarn lint",
+		"prebuild": "yarn prettier-check && yarn eslint && yarn stylelint-check",
 		"build": "rm -rf dist && webpack --mode production --config webpack.prod.config.js && webpack --mode production --config webpack.server.config.js",
 		"test": "yarn prettier-check; yarn build",
 		"start": "node ./dist/server.*.wp.js",
@@ -17,7 +17,7 @@
 		"lint": "yarn prettier; yarn eslint; yarn stylelint",
 		"eslint": "eslint '*/**/*.{js,ts,tsx}'",
 		"stylelint": "stylelint --config ./.stylelintrc --fix \"**/*.scss\" --color --cache",
-		"stylelint-check": "stylelint --config ./.stylelintrc \"**/*.css\" \"**/*.scss\" --color --cache",
+		"stylelint-check": "stylelint --config ./.stylelintrc \"**/*.scss\" --color --cache",
 		"storybook": "start-storybook -p 6006 --no-dll",
 		"build-storybook": "build-storybook --no-dll",
 		"snapshot": "build-storybook && percy-storybook --widths=320,1280"
