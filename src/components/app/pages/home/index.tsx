@@ -6,7 +6,7 @@
 
 import React from "react";
 
-import { Twitter, GitHub, LinkedIn } from "../../../../icons";
+import { GitHub, LinkedIn } from "../../../../icons";
 import Profile from "../../../../../public/images/mine/profile.jpg";
 
 import "./styles.scss";
@@ -23,20 +23,23 @@ const HomeContent: React.FunctionComponent = () => {
 						for users
 					</h2>
 				</section>
-				<section className='philosophy' id='philosophy'>
+				<section className='about-me' id='about-me'>
 					<div className='color-overlay' />
 					<div className='row-1'>
 						<div className='image-container'>
 							<img src={Profile} loading='lazy' />
 						</div>
 						<div className='text-container'>
-							<h2>I think software should be:</h2>
-							<ul className='software-list'>
-								<li>simple</li>
-								<li>fast</li>
-								<li>elegant</li>
-								<li>maintainable</li>
-								<li>user-focused</li>
+							<h2>Quick facts</h2>
+							<ul className='facts-list'>
+								<li>Frontend and backend web developer</li>
+								<li>
+									Experience working with both modern and
+									legacy web technologies
+								</li>
+								<li>Experience with remote work</li>
+								<li>Based in the Pacific Northwest</li>
+								<li>Currently working for Faithlife, LLC</li>
 							</ul>
 						</div>
 					</div>

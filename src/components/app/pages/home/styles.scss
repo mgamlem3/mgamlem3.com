@@ -30,9 +30,7 @@
 	}
 
 	.background-box {
-		background-color: colors.$primary-dark;
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-		border-radius: 4px;
+		@include variables.background-box();
 	}
 
 	h1.background-box {
@@ -57,10 +55,12 @@
 	}
 }
 
-.philosophy {
+.about-me {
 	position: relative;
-	background-image: url("../../../../../public/images/others/flm-blur.png");
-	background-position-y: -400px;
+	/*
+		Background photo credit: Nick Kelly / Faithlife Corporation / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)
+	*/
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/eb/Downtown_Bellingham%2C_Washington.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -76,12 +76,12 @@
 	.row-1 {
 		display: flex;
 		position: relative;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		align-items: center;
 		padding: 40px 10px;
 
 		.image-container {
-			max-width: 30%;
+			max-width: 25%;
 			overflow: hidden;
 			z-index: 2;
 
@@ -92,10 +92,19 @@
 		}
 
 		.text-container {
-			max-width: 70%;
+			max-width: 50%;
 			z-index: 2;
+			display: flex;
+			flex-direction: column;
 
-			.software-list {
+			h2 {
+				@include variables.background-box;
+				width: fit-content;
+				align-self: center;
+				padding: 10px 16px 4px 16px;
+			}
+
+			.facts-list {
 				font-size: variables.$font-size-h3;
 				font-family: variables.$theme-font-body;
 				font-style: italic;
