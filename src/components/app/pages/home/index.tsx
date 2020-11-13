@@ -23,7 +23,7 @@ const HomeContent: React.FunctionComponent = () => {
 						for users
 					</h2>
 				</section>
-				<section className='about-me' id='about-me'>
+				<section className='about-me'>
 					<div className='color-overlay' />
 					<div className='row-1'>
 						<div className='image-container'>
@@ -42,15 +42,6 @@ const HomeContent: React.FunctionComponent = () => {
 								<li>Currently working for Faithlife, LLC</li>
 							</ul>
 						</div>
-					</div>
-					<div className='paragraph-container'>
-						<p>
-							In a rapidly changing world, we need software that
-							can quickly adapt to user and customer needs. The
-							challenge is to do this efficiently without
-							sacrificing quality. Lorem ipsum dolor sit amet,
-							consectetur adipiscing.
-						</p>
 					</div>
 				</section>
 				<section className='more-info' id='more_info'>
