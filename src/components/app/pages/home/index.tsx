@@ -23,6 +23,7 @@ const HomeContent: React.FunctionComponent = () => {
 						for users
 					</h2>
 				</section>
+				{/* Background photo credit: Nick Kelly / Faithlife Corporation / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0) */}
 				<section className='about-me'>
 					<div className='color-overlay' />
 					<div className='row-1'>
