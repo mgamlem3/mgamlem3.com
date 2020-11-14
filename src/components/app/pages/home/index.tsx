@@ -6,7 +6,6 @@
 
 import React from "react";
 
-import { GitHub, LinkedIn } from "../../../../icons";
 import Profile from "../../../../../public/images/mine/profile.jpg";
 
 import "./styles.scss";
@@ -45,17 +44,24 @@ const HomeContent: React.FunctionComponent = () => {
 						</div>
 					</div>
 				</section>
-				<section className='more-info' id='more_info'>
-					{/* Background photo credit: Nick Kelly / Faithlife Corporation / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0) */}
-					<div className='color-overlay' />
+				{/* Background photo credit: Mark Wagner / CC BY
+				(https://https://creativecommons.org/licenses/by/2.5/deed.en) */}
+				<section className='more-info'>
+					<img
+						src='https://upload.wikimedia.org/wikipedia/commons/7/7d/SpokaneFromPalisades_20070614.jpg'
+						className='background-image'
+					/>
 					<div className='row-1'>
-						<h2>Want to learn more about me?</h2>
-						<div></div>
+						<a
+							href='https://www.linkedin.com/in/michaelgamlemiii/'
+							target='_blank'
+							rel='nooopener noreferrer'
+						>
+							<h2>Download my resumé...</h2>
+						</a>
 					</div>
 					<div className='row-2'>
-						<Twitter />
-						<GitHub />
-						<LinkedIn />
+						<h3>...or learn some more about me.</h3>
 					</div>
 				</section>
 			</main>

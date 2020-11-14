@@ -48,18 +48,21 @@
 		font-family: variables.$theme-font-body;
 	}
 
+	@mixin link-no-decorations {
+		/* stylelint-disable declaration-no-important */
+		color: unset !important;
+
+		text-emphasis: unset !important;
+
+		text-decoration: unset !important;
+
+		/* stylelint-enable declaration-no-important */
+	}
+
 	a {
+		@include link-no-decorations();
 		&:hover {
-			/* These are to override default link hover states */
-
-			/* stylelint-disable declaration-no-important */
-			color: unset !important;
-
-			text-emphasis: unset !important;
-
-			text-decoration: unset !important;
-
-			/* stylelint-enable declaration-no-important */
+			@include link-no-decorations();
 		}
 	}
 }

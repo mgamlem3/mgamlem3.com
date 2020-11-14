@@ -23,7 +23,7 @@ $boldest: 700;
 
 $nav-height: 50px;
 
-@mixin background-box{
+@mixin background-box {
 	background-color: colors.$primary-dark;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 	border-radius: 4px;
