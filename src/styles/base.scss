@@ -7,6 +7,29 @@
 @use "./variables" as variables;
 @use "./colors" as colors;
 
+@mixin link-no-decorations {
+	/* stylelint-disable declaration-no-important */
+	color: unset;
+
+	text-emphasis: unset;
+
+	text-decoration: unset;
+
+	/* stylelint-enable declaration-no-important */
+}
+
+* {
+	font-family: variables.$theme-font-body;
+	color: colors.$text-light;
+
+	a {
+		@include link-no-decorations();
+		&:hover {
+			@include link-no-decorations();
+		}
+	}
+}
+
 .app {
 	font-family: variables.$theme-font-body;
 	color: colors.$text-light;
@@ -46,23 +69,5 @@
 	p {
 		font-size: variables.$font-size-h3;
 		font-family: variables.$theme-font-body;
-	}
-
-	@mixin link-no-decorations {
-		/* stylelint-disable declaration-no-important */
-		color: unset !important;
-
-		text-emphasis: unset !important;
-
-		text-decoration: unset !important;
-
-		/* stylelint-enable declaration-no-important */
-	}
-
-	a {
-		@include link-no-decorations();
-		&:hover {
-			@include link-no-decorations();
-		}
 	}
 }
