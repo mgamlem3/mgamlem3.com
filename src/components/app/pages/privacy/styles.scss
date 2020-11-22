@@ -14,15 +14,11 @@
 	h2,
 	div {
 		color: inherit;
+		text-align: left;
 	}
 
 	.link {
 		color: colors.$primary;
 		text-decoration: underline;
 	}
-}
-
-.main h1,
-main h2 {
-	text-align: left;
 }
