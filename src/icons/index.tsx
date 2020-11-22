@@ -91,7 +91,7 @@ export const LinkedIn: React.FunctionComponent<IconProps> = ({
 			data-supported-dps='34x34'
 			focusable='false'
 		>
-			<g transform='scale(.7083)' fill='none' fillRule='evenodd'>
+			<g transform='scale(.6583)' fill='none' fillRule='evenodd'>
 				<rect
 					className='bug-text-color'
 					fill={getLinkedInColor(color, false)}
@@ -117,8 +117,8 @@ function getLinkedInColor(color: string, primary: boolean): string {
 		else if (color === "light") return light;
 		else return dark;
 	} else {
-		if (color !== "default") return "";
-		else return light;
+		if (!color || color == "default") return light;
+		else return "";
 	}
 }
 
