@@ -9,6 +9,7 @@ import React from "react";
 import Page from "./page";
 import HomeContent from "./home";
 import AboutContent from "./about";
+import PrivacyContent from "./privacy"
 
 export const Home: React.FunctionComponent = () => {
 	return (
@@ -22,6 +23,14 @@ export const About: React.FunctionComponent = () => {
 	return (
 		<Page>
 			<AboutContent />
+		</Page>
+	);
+};
+
+export const Privacy: React.FunctionComponent = () => {
+	return (
+		<Page>
+			<PrivacyContent />
 		</Page>
 	);
 };

@@ -7,6 +7,9 @@
 import { RoutesDto } from "../../types";
 
 export const Routes: RoutesDto = {
-	About: "/about",
 	Home: "/",
+	About: "/about",
+	Credits: "/credits",
+	Privacy: "/privacy",
+	Terms: "/terms",
 };
