@@ -9,13 +9,13 @@ import React from "react";
 import Nav from "../../nav";
 import Footer from "../../footer";
 
-import "../../../styles/base.scss";
+import styles from "../../../styles/base.scss";
 
 const Page: React.FunctionComponent = ({ children }) => {
 	return (
 		<React.Fragment>
 			<Nav />
-			<div className='app'>{children}</div>
+			<div className={styles.app}>{children}</div>
 			<Footer />
 		</React.Fragment>
 	);

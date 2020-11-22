@@ -17,7 +17,7 @@ const customHistory = createBrowserHistory();
 
 const App: React.FunctionComponent = () => {
 	return (
-		<div className={styles.app}>
+		<React.Fragment>
 			<Router history={customHistory}>
 				<Switch>
 					<Route path={Routes.About} component={About} />
@@ -27,7 +27,7 @@ const App: React.FunctionComponent = () => {
 					</Route>
 				</Switch>
 			</Router>
-		</div>
+		</React.Fragment>
 	);
 };
 
