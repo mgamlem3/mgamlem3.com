@@ -6,7 +6,7 @@
 
 import React from "react";
 
-import "./styles.scss";
+import styles from "./styles.scss";
 
 const AboutContent: React.FunctionComponent = () => {
 	return <div>About</div>;

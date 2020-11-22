@@ -8,30 +8,30 @@ import React from "react";
 
 import Profile from "../../../../../public/images/mine/profile.jpg";
 
-import "./styles.scss";
+import styles from "./styles.scss";
 
 const HomeContent: React.FunctionComponent = () => {
 	return (
 		<div>
 			<main>
-				<section className='hero'>
-					<div className='color-overlay' />
-					<h1 className='background-box'>Michael Gamlem III</h1>
-					<h2 className='background-box'>
+				<section className={styles.hero}>
+					<div className={styles.colorOverlay} />
+					<h1 className={styles.backgroundBox}>Michael Gamlem III</h1>
+					<h2 className={styles.backgroundBox}>
 						I want to build excellent software that solves problems
 						for users
 					</h2>
 				</section>
 				{/* Background photo credit: Nick Kelly / Faithlife Corporation / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0) */}
-				<section className='about-me'>
-					<div className='color-overlay' />
-					<div className='row-1'>
-						<div className='image-container'>
+				<section className={styles.aboutMe}>
+					<div className={styles.colorOverlay} />
+					<div className={styles.row1}>
+						<div className={styles.imageContainer}>
 							<img src={Profile} loading='lazy' />
 						</div>
-						<div className='text-container'>
+						<div className={styles.textContainer}>
 							<h2>Quick facts</h2>
-							<ul className='facts-list'>
+							<ul className={styles.facetList}>
 								<li>Frontend and backend web developer</li>
 								<li>
 									Experience working with both modern and
@@ -46,12 +46,12 @@ const HomeContent: React.FunctionComponent = () => {
 				</section>
 				{/* Background photo credit: Mark Wagner / CC BY
 				(https://https://creativecommons.org/licenses/by/2.5/deed.en) */}
-				<section className='more-info'>
+				<section className={styles.moreInfo}>
 					<img
 						src='https://upload.wikimedia.org/wikipedia/commons/7/7d/SpokaneFromPalisades_20070614.jpg'
-						className='background-image'
+						className={styles.backgroundImage}
 					/>
-					<div className='row-1'>
+					<div className={styles.row1}>
 						<a
 							href='https://www.linkedin.com/in/michaelgamlemiii/'
 							target='_blank'
@@ -60,7 +60,7 @@ const HomeContent: React.FunctionComponent = () => {
 							<h2>Download my resumé...</h2>
 						</a>
 					</div>
-					<div className='row-2'>
+					<div className={styles.row2}>
 						<h3>...or learn some more about me.</h3>
 					</div>
 				</section>

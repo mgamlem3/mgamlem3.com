@@ -21,7 +21,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	.color-overlay {
+	.colorOverlay {
 		position: absolute;
 		background-color: colors.$primary-dark;
 		filter: opacity(0.2);
@@ -29,17 +29,17 @@
 		height: 100%;
 	}
 
-	.background-box {
+	.backgroundBox {
 		@include variables.background-box();
 	}
 
-	h1.background-box {
-		@extend .background-box;
+	h1.backgroundBox {
+		@extend .backgroundBox;
 		padding: 10px 16px 0 16px;
 	}
 
-	h2.background-box {
-		@extend .background-box;
+	h2.backgroundBox {
+		@extend .backgroundBox;
 		padding: 6px 16px 4px 16px;
 	}
 
@@ -55,7 +55,7 @@
 	}
 }
 
-.about-me {
+.aboutMe {
 	position: relative;
 	/*
 		Background photo credit: Nick Kelly / Faithlife Corporation / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)
@@ -63,9 +63,9 @@
 	background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/eb/Downtown_Bellingham%2C_Washington.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	z-index: 100;
+	z-index: 99;
 
-	.color-overlay {
+	.colorOverlay {
 		position: absolute;
 		background-color: colors.$grey-base;
 		filter: opacity(0.4);
@@ -74,14 +74,14 @@
 		z-index: 1;
 	}
 
-	.row-1 {
+	.row1 {
 		display: flex;
 		position: relative;
 		justify-content: space-evenly;
 		align-items: center;
 		padding: 40px 10px;
 
-		.image-container {
+		.imageContainer {
 			max-width: 25%;
 			overflow: hidden;
 			z-index: 2;
@@ -92,7 +92,7 @@
 			}
 		}
 
-		.text-container {
+		.textContainer {
 			max-width: 50%;
 			z-index: 2;
 			display: flex;
@@ -105,7 +105,7 @@
 				padding: 10px 16px 4px 16px;
 			}
 
-			.facts-list {
+			.factsList {
 				font-size: variables.$font-size-h3;
 				font-family: variables.$theme-font-body;
 				font-style: italic;
@@ -113,7 +113,7 @@
 		}
 	}
 
-	.paragraph-container {
+	.paragraphContainer {
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -128,7 +128,7 @@
 	}
 }
 
-.more-info {
+.moreInfo {
 	position: relative;
 	min-height: 40vh;
 	display: flex;
@@ -136,7 +136,7 @@
 	justify-content: center;
 	align-items: center;
 
-	.background-image {
+	.backgroundImage {
 		position: absolute;
 		/*
 			Background Photo Credit: Mark Wagner (User:Carnildo), CC BY 2.5 <https://creativecommons.org/licenses/by/2.5>, via Wikimedia Commons
@@ -151,14 +151,14 @@
 		z-index: 10;
 	}
 
-	.row-1,
-	.row-2,
-	.row-3 {
+	.row1,
+	.row2,
+	.row3 {
 		@include variables.row;
 		filter: none;
 	}
 
-	.row-1 {
+	.row1 {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -174,7 +174,7 @@
 		}
 	}
 
-	.row-2 {
+	.row2 {
 		max-height: 60px;
 
 		h3 {
