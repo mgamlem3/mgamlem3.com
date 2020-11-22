@@ -26,7 +26,7 @@ const PrivacyContent: React.FunctionComponent = () => {
 				you choose to use the Service, then you agree to the collection
 				and use of information in relation with this policy.
 			</div>
-			<h2>Information collected</h2>
+			<h2>Information Collected</h2>
 			<div>
 				We record standard information on site visitors, including IP
 				addresses, times and dates, referring/exit pages, operating
@@ -35,7 +35,7 @@ const PrivacyContent: React.FunctionComponent = () => {
 				statistical data about our visitors and does not personally
 				identify any individual.
 			</div>
-			<h2>How information is used</h2>
+			<h2>How Information is Used</h2>
 			<div>
 				We will not use or share your information with anyone except as
 				described in this Privacy Policy. The terms used in this Privacy
