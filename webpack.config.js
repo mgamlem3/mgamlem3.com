@@ -7,6 +7,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	mode: "development",
@@ -20,7 +21,18 @@ module.exports = {
 			},
 			{
 				test: /\.(s*)css$/,
-				use: ["style-loader", "css-loader", "sass-loader"],
+				use: [
+					"style-loader",
+					{
+						loader: "css-loader",
+						options: {
+							modules: {
+								localIdentName: "[path][name]__[local]",
+							},
+						},
+					},
+					"sass-loader",
+				],
 			},
 			{
 				test: /\.(jpg|png)$/,
@@ -44,5 +56,12 @@ module.exports = {
 		historyApiFallback: true,
 		hotOnly: true,
 	},
-	plugins: [new webpack.HotModuleReplacementPlugin()],
+	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
+		new MiniCssExtractPlugin({
+			filename: "[hash].css",
+			chunkFilename: "[id].css",
+			ignoreOrder: false,
+		}),
+	],
 };
