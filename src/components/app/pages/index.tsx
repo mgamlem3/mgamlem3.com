@@ -9,7 +9,7 @@ import React from "react";
 import Page from "./page";
 import HomeContent from "./home";
 import AboutContent from "./about";
-import PrivacyContent from "./privacy"
+import PrivacyContent from "./privacy";
 
 export const Home: React.FunctionComponent = () => {
 	return (

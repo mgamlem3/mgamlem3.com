@@ -10,7 +10,9 @@
 	color: colors.$text-dark;
 	margin: 0 10% 5% 10%;
 
-	h1, h2, div {
+	h1,
+	h2,
+	div {
 		color: inherit;
 	}
 
@@ -20,6 +22,7 @@
 	}
 }
 
-.main h1, main h2 {
+.main h1,
+main h2 {
 	text-align: left;
 }
