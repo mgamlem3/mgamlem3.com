@@ -9,9 +9,7 @@ import { Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { Routes } from "./routes";
 
-import { Home, About, Privacy } from "./pages";
-
-import styles from "../../styles/base.scss";
+import { Home, About, Privacy, Terms } from "./pages";
 
 const customHistory = createBrowserHistory();
 
@@ -22,6 +20,7 @@ const App: React.FunctionComponent = () => {
 				<Switch>
 					<Route path={Routes.About} component={About} />
 					<Route path={Routes.Privacy} component={Privacy} />
+					<Route path={Routes.Terms} component={Terms} />
 					<Route path={Routes.Home}>
 						<Home />
 					</Route>

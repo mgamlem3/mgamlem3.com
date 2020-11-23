@@ -10,6 +10,7 @@ import Page from "./page";
 import HomeContent from "./home";
 import AboutContent from "./about";
 import PrivacyContent from "./privacy";
+import TermsContent from "./terms";
 
 export const Home: React.FunctionComponent = () => {
 	return (
@@ -31,6 +32,14 @@ export const Privacy: React.FunctionComponent = () => {
 	return (
 		<Page>
 			<PrivacyContent />
+		</Page>
+	);
+};
+
+export const Terms: React.FunctionComponent = () => {
+	return (
+		<Page>
+			<TermsContent />
 		</Page>
 	);
 };
