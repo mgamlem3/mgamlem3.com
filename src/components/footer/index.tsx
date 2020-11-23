@@ -43,6 +43,8 @@ const Footer: React.FunctionComponent = () => {
 				<Link to={Routes.Credits}>Credits</Link>
 				<div>|</div>
 				<Link to={Routes.Privacy}>Privacy</Link>
+				<div>|</div>
+				<Link to={Routes.Terms}>Terms</Link>
 			</div>
 		</div>
 	);
