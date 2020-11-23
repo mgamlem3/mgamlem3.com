@@ -6,6 +6,7 @@
 
 import path from "path";
 import express, { Request, Response } from "express";
+import fs from "fs";
 
 const PORT = 3000;
 const DIST_DIR = path.join(__dirname);
@@ -16,7 +17,8 @@ app.use(express.static(DIST_DIR));
 
 app.get(/.(jpg|png|js|css)$/, (req: Request, res: Response) => {
 	checkContentEncoding(req, res);
-	sendFile(req, res);
+	if (checkIfFileAllowed(req.url)) sendFile(req, res);
+	else res.status(404).end();
 });
 
 app.get("/", (req: Request, res: Response) => {
@@ -37,6 +39,13 @@ const checkContentEncoding = (req: Request, res: Response) => {
 		req.url += ".gz";
 		res.set("Content-Encoding", "gzip");
 	}
+};
+
+const checkIfFileAllowed = (fileName: string): boolean => {
+	if (fs.existsSync(DIST_DIR + fileName)) {
+		return true;
+	}
+	return false;
 };
 
 const sendFile = (req: Request, res: Response) => {
