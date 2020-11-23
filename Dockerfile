@@ -30,6 +30,4 @@ COPY --from=0 /opt/app/package.json /opt/app/package.json
 
 EXPOSE 3000
 
-RUN cd dist && pwd && ls
-
 CMD [ "yarn", "start" ]
