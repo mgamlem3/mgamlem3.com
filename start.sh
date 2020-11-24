@@ -1,8 +1,7 @@
 docker run \
     -it \
+    -d \
     --rm \
-    -v ${PWD}:/app \
-    -v /app/node_modules \
     -p 3000:3000 \
-    -e CHOKIDAR_USEPOLLING=true \
-    mgamlem3.com
+    --name mgamlem3.com \
+    ghcr.io/mgamlem3/mgamlem3.com/mgamlem3.com:latest
