@@ -9,6 +9,7 @@ import React from "react";
 import Page from "./page";
 import HomeContent from "./home";
 import AboutContent from "./about";
+import ExperienceContent from "./experience";
 import PrivacyContent from "./privacy";
 import TermsContent from "./terms";
 
@@ -24,6 +25,14 @@ export const About: React.FunctionComponent = () => {
 	return (
 		<Page>
 			<AboutContent />
+		</Page>
+	);
+};
+
+export const Experience: React.FunctionComponent = () => {
+	return (
+		<Page>
+			<ExperienceContent />
 		</Page>
 	);
 };
