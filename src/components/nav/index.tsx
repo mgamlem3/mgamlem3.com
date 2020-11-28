@@ -34,7 +34,7 @@ const Nav: React.FunctionComponent = () => {
 			ref={ref}
 		>
 			<div className={`${styles.navControls} ${styles.stickyInner}`}>
-				<NavButton link='/' text='Home' />
+				<NavButton link={Routes.Home} text='Home' />
 				<NavButton link='/' text='Projects' />
 				<NavButton link={Routes.Experience} text='Experience' />
 				<NavButton link='/' text='Hobbies' />
