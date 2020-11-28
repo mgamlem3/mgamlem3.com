@@ -10,6 +10,7 @@ export const Routes: RoutesDto = {
 	Home: "/",
 	About: "/about",
 	Credits: "/credits",
+	Experience: "/experience",
 	Privacy: "/privacy",
 	Terms: "/terms",
 };

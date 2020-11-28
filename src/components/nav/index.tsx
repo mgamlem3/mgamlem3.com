@@ -5,6 +5,7 @@
  */
 
 import React, { useEffect, useRef, useState } from "react";
+import { Routes } from "../app/routes";
 
 import NavButton from "./nav-button";
 import styles from "./styles.scss";
@@ -35,7 +36,7 @@ const Nav: React.FunctionComponent = () => {
 			<div className={`${styles.navControls} ${styles.stickyInner}`}>
 				<NavButton link='/' text='Home' />
 				<NavButton link='/' text='Projects' />
-				<NavButton link='/' text='Experience' />
+				<NavButton link={Routes.Experience} text='Experience' />
 				<NavButton link='/' text='Hobbies' />
 			</div>
 		</nav>
