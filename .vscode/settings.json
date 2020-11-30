@@ -1,9 +1,13 @@
 {
 	"files.autoSave": "afterDelay",
 	"editor.insertSpaces": false,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"files.eol": "\n",
 	"workbench.colorCustomizations": {
 		"titleBar.activeBackground": "#29b6f6",
-		"titleBar.activeForeground": "#ffffff",
+		"titleBar.activeForeground": "#ffffff"
 	}
 }
-
