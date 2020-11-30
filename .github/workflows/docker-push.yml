@@ -15,6 +15,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.CR_SECRET }}
           registry: ghcr.io
-          repository: mgamlem3/mgamlem3.com/mgamlem3.com
+          repository: mgamlem3/mgamlem3.com
           tag_with_ref: true
           tags: latest
