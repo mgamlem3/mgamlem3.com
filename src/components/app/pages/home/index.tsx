@@ -44,9 +44,8 @@ const HomeContent: React.FunctionComponent = () => {
 						</div>
 					</div>
 				</section>
-				{/* Background photo credit: Mark Wagner / CC BY
-				(https://https://creativecommons.org/licenses/by/2.5/deed.en) */}
 				<section className={styles.moreInfo}>
+					{/* Background photo credit: Mark Wagner / CC BY (https://https://creativecommons.org/licenses/by/2.5/deed.en) */}
 					<img
 						src='https://upload.wikimedia.org/wikipedia/commons/7/7d/SpokaneFromPalisades_20070614.jpg'
 						className={styles.backgroundImage}
