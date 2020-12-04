@@ -37,6 +37,8 @@
 
 	.links {
 		min-width: 16%;
+		max-width: 33%;
+		flex-grow: 0.1;
 		display: flex;
 		justify-content: space-between;
 	}
