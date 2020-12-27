@@ -10,5 +10,6 @@ export interface RoutesDto {
 	Experience: string;
 	Credits: string;
 	Privacy: string;
+	Projects: string;
 	Terms: string;
 }
