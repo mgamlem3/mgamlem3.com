@@ -12,6 +12,7 @@ import AboutContent from "./about";
 import CreditsContent from "./credits";
 import ExperienceContent from "./experience";
 import PrivacyContent from "./privacy";
+import ProjectsContent from "./projects";
 import TermsContent from "./terms";
 
 export const Home: React.FunctionComponent = () => {
@@ -50,6 +51,14 @@ export const Privacy: React.FunctionComponent = () => {
 	return (
 		<Page>
 			<PrivacyContent />
+		</Page>
+	);
+};
+
+export const Projects: React.FunctionComponent = () => {
+	return (
+		<Page>
+			<ProjectsContent />
 		</Page>
 	);
 };

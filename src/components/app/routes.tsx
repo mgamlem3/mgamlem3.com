@@ -12,5 +12,6 @@ export const Routes: RoutesDto = {
 	Credits: "/credits",
 	Experience: "/experience",
 	Privacy: "/privacy",
+	Projects: "/projects",
 	Terms: "/terms",
 };

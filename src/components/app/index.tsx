@@ -9,7 +9,15 @@ import { Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { Routes } from "./routes";
 
-import { Home, About, Credits, Experience, Privacy, Terms } from "./pages";
+import {
+	Home,
+	About,
+	Credits,
+	Experience,
+	Privacy,
+	Projects,
+	Terms,
+} from "./pages";
 
 const customHistory = createBrowserHistory();
 
@@ -22,6 +30,7 @@ const App: React.FunctionComponent = () => {
 					<Route path={Routes.Credits} component={Credits} />
 					<Route path={Routes.Experience} component={Experience} />
 					<Route path={Routes.Privacy} component={Privacy} />
+					<Route path={Routes.Projects} component={Projects} />
 					<Route path={Routes.Terms} component={Terms} />
 					<Route path={Routes.Home}>
 						<Home />

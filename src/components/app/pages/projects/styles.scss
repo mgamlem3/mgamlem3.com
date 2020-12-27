@@ -1,0 +1,81 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+@use "../../../../styles/colors" as colors;
+@use "../../../../styles/variables" as variables;
+@use "../../../../styles/media-queries" as media-queries;
+
+.projects {
+	h1 {
+		@include variables.background-box();
+		text-align: left;
+		margin-left: 6%;
+		align-self: flex-start;
+	}
+
+	h2 {
+		@include variables.background-box();
+		padding-top: 6px;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	.project {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 10vh;
+
+		* {
+			z-index: 10;
+			color: colors.$text-light;
+		}
+
+		.projectHead {
+			@include variables.background-box();
+			background-color: colors.$primary;
+			display: flex;
+			align-items: center;
+			padding: 10px 16px 6px 16px;
+			margin: 32px 0 20px 0;
+		}
+
+		.description {
+			@include variables.background-box();
+			max-width: 60vw;
+			display: flex;
+			align-items: center;
+
+			.list {
+				margin-top: 16px;
+			}
+		}
+	}
+
+	.current {
+		.colorOverlay {
+			@include variables.color-overlay();
+		}
+
+		.backgroundImage {
+			@include variables.background-image();
+			background-image: url("../../../../../public/images/mine/bp-bridge.jpg");
+		}
+	}
+
+	.previous {
+		.colorOverlay {
+			@include variables.color-overlay();
+		}
+
+		.backgroundImage {
+			@include variables.background-image();
+			background-image: url("../../../../../public/images/mine/trees.jpg");
+		}
+	}
+}
