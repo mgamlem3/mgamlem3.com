@@ -54,17 +54,17 @@ const CreditsContent: React.FunctionComponent = () => {
 						src='https://upload.wikimedia.org/wikipedia/commons/7/7d/SpokaneFromPalisades_20070614.jpg'
 						className={styles.backgroundImage}
 					/>
-					<div className={styles.text}>
-						Mark Wagner /{" "}
-						<a
-							href='https://https://creativecommons.org/licenses/by/2.5/deed.en'
-							target='__blank'
-							rel='noopener noreferrer'
-						>
-							CC BY
-						</a>
-					</div>
 				</a>
+				<div className={styles.text}>
+					Mark Wagner /{" "}
+					<a
+						href='https://https://creativecommons.org/licenses/by/2.5/deed.en'
+						target='__blank'
+						rel='noopener noreferrer'
+					>
+						CC BY
+					</a>
+				</div>
 			</div>
 			<div>
 				<h2>Flatiron Building / Faithlife</h2>
@@ -74,18 +74,18 @@ const CreditsContent: React.FunctionComponent = () => {
 					rel='noopener noreferrer'
 				>
 					<img src='https://upload.wikimedia.org/wikipedia/commons/0/0a/Bellingham_Flatiron_Building.png' />
-					<div className={styles.text}>
-						Patrick Fore / Faithlife Corporation,{" "}
-						<a
-							href='https://creativecommons.org/licenses/by-sa/4.0'
-							target='__blank'
-							rel='noopener noreferrer'
-						>
-							CC BY-SA 4.0
-						</a>
-						, via Wikimedia Commons
-					</div>
 				</a>
+				<div className={styles.text}>
+					Patrick Fore / Faithlife Corporation,{" "}
+					<a
+						href='https://creativecommons.org/licenses/by-sa/4.0'
+						target='__blank'
+						rel='noopener noreferrer'
+					>
+						CC BY-SA 4.0
+					</a>
+					, via Wikimedia Commons
+				</div>
 			</div>
 		</section>
 	);
