@@ -76,6 +76,7 @@
 		.backgroundImage {
 			@include variables.background-image();
 			background-image: url("../../../../../public/images/mine/trees.jpg");
+			transform: translateZ(-1px) translateY(60px) scale(1.1);
 		}
 	}
 }
