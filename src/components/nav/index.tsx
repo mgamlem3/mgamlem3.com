@@ -37,7 +37,7 @@ const Nav: React.FunctionComponent = () => {
 				<NavButton link={Routes.Home} text='Home' />
 				<NavButton link={Routes.Projects} text='Projects' />
 				<NavButton link={Routes.Experience} text='Experience' />
-				<NavButton link='/' text='Hobbies' />
+				{/* <NavButton link='/' text='Hobbies' /> */}
 			</div>
 		</nav>
 	);
