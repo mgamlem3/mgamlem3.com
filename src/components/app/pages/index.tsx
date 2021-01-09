@@ -8,7 +8,6 @@ import React from "react";
 
 import Page from "./page";
 import HomeContent from "./home";
-import AboutContent from "./about";
 import CreditsContent from "./credits";
 import ExperienceContent from "./experience";
 import PrivacyContent from "./privacy";
@@ -19,14 +18,6 @@ export const Home: React.FunctionComponent = () => {
 	return (
 		<Page>
 			<HomeContent />
-		</Page>
-	);
-};
-
-export const About: React.FunctionComponent = () => {
-	return (
-		<Page>
-			<AboutContent />
 		</Page>
 	);
 };
