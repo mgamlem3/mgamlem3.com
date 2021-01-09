@@ -6,7 +6,6 @@
 
 export interface RoutesDto {
 	Home: string;
-	About: string;
 	Experience: string;
 	Credits: string;
 	Privacy: string;
