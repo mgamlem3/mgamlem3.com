@@ -7,6 +7,8 @@
 import React from "react";
 
 import Profile from "../../../../../public/images/mine/profile.jpg";
+import { Routes } from "../../routes";
+import { Link } from "react-router-dom";
 
 import styles from "./styles.scss";
 
@@ -60,7 +62,9 @@ const HomeContent: React.FunctionComponent = () => {
 						</a>
 					</div>
 					<div className={styles.row2}>
-						<h3>...or learn some more about me.</h3>
+						<Link to={Routes.Experience}>
+							<h3>...or learn some more about me.</h3>
+						</Link>
 					</div>
 				</section>
 			</main>
