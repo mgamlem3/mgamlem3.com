@@ -7,6 +7,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./components/app";
+import "../public/favicon.ico";
+import "../public/favicon-16x16.png";
+import "../public/favicon-32x32.png";
 
 if (typeof window !== "undefined") {
 	ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);

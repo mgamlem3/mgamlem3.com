@@ -42,7 +42,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(jpg|png)$/,
+				test: /\.(jpg|png|ico)$/,
 				loader: "file-loader",
 			},
 		],
@@ -75,6 +75,7 @@ module.exports = {
 			title: "mgamlem3.com",
 			minify: true,
 			template: "./public/index.html",
+			favicon: "./public/favicon.ico",
 		}),
 		new MiniCssExtractPlugin({
 			filename: "[hash].css",
