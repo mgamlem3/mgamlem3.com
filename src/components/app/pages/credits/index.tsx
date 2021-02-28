@@ -53,6 +53,7 @@ const CreditsContent: React.FunctionComponent = () => {
 					<img
 						src='https://upload.wikimedia.org/wikipedia/commons/7/7d/SpokaneFromPalisades_20070614.jpg'
 						className={styles.backgroundImage}
+						alt='View of Spokane, WA'
 					/>
 				</a>
 				<div className={styles.text}>
@@ -73,7 +74,10 @@ const CreditsContent: React.FunctionComponent = () => {
 					target='__blank'
 					rel='noopener noreferrer'
 				>
-					<img src='https://upload.wikimedia.org/wikipedia/commons/0/0a/Bellingham_Flatiron_Building.png' />
+					<img
+						src='https://upload.wikimedia.org/wikipedia/commons/0/0a/Bellingham_Flatiron_Building.png'
+						alt='Flatiron building in downtown Bellingham'
+					/>
 				</a>
 				<div className={styles.text}>
 					Patrick Fore / Faithlife Corporation,{" "}

@@ -38,7 +38,6 @@ const ProjectsContent: React.FunctionComponent = () => {
 								</ul>
 							</div>
 						</div>
-						{/* <img src={Favicon} alt='mgamlem3.com icon' /> */}
 					</div>
 				</div>
 				<div className={styles.project}>

@@ -29,7 +29,11 @@ const HomeContent: React.FunctionComponent = () => {
 					<div className={styles.colorOverlay} />
 					<div className={styles.row1}>
 						<div className={styles.imageContainer}>
-							<img src={Profile} loading='lazy' />
+							<img
+								src={Profile}
+								loading='lazy'
+								alt='Michael Gamlem III'
+							/>
 						</div>
 						<div className={styles.textContainer}>
 							<h2>Quick facts</h2>
@@ -51,6 +55,7 @@ const HomeContent: React.FunctionComponent = () => {
 					<img
 						src='https://upload.wikimedia.org/wikipedia/commons/7/7d/SpokaneFromPalisades_20070614.jpg'
 						className={styles.backgroundImage}
+						alt='View of Spokane, WA'
 					/>
 					<div className={styles.row1}>
 						<a
