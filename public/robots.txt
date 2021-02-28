@@ -1,0 +1,6 @@
+User-agent: *
+
+Sitemap: https://www.mgamlem3.com/sitemap.xml
+Disallow: /credits
+Disallow: /privacy
+Disallow: /terms

@@ -32,6 +32,13 @@ module.exports = {
 				loader: "babel-loader",
 				exclude: /node_modules/,
 			},
+			{
+				test: /\.(txt|xml)$/,
+				loader: "file-loader",
+				options: {
+					name: "[name].[ext]",
+				},
+			},
 		],
 	},
 	resolve: {

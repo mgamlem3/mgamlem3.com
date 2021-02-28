@@ -7,11 +7,21 @@
 import path from "path";
 import express, { Request, Response } from "express";
 import fs from "fs";
+import "../public/robots.txt";
+import "../public/sitemap.xml";
 
 const PORT = 3000;
 const DIST_DIR = path.join(__dirname);
 
 const app = express();
+
+app.get("/robots.txt", (req: Request, res: Response) => {
+	sendFile(req, res);
+});
+
+app.get("/sitemap.xml", (req: Request, res: Response) => {
+	sendFile(req, res);
+});
 
 app.get(/.(jpg|png|js|css)$/, (req: Request, res: Response) => {
 	sanitizeUrl(req);
@@ -57,6 +67,8 @@ const getContentType = (fileName: string) => {
 		return "image/jpeg";
 	else if (fileName.match(/.png(.br|.gz)?$/)) return "image/png";
 	else if (fileName.match(/.ico$/)) return "image/vnd.microsoft.icon";
+	else if (fileName.match(/.xml$/)) return "application/xml";
+	else if (fileName.match(/.txt$/)) return "text/plain";
 	else {
 		console.error("Broken: ", fileName);
 		return "";
