@@ -13,6 +13,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
 	mode: "development",
 	entry: path.join(__dirname, "/src/index.tsx"),
+	devtool: "source-map",
 	module: {
 		rules: [
 			{
