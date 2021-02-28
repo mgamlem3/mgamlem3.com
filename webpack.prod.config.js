@@ -92,5 +92,24 @@ module.exports = {
 			filename: "[path][base].gz",
 			test: compressionRegex,
 		}),
+		new ImageMinimizerPlugin({
+			minimizerOptions: {
+				plugins: [
+					["gifsicle", { interlaced: true }],
+					["mozjpeg", { progressive: true, quality: 15 }],
+					["pngquant", { optimizationLevel: 5 }],
+					[
+						"svgo",
+						{
+							plugins: [
+								{
+									removeViewBox: false,
+								},
+							],
+						},
+					],
+				],
+			},
+		}),
 	],
 };
