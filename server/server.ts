@@ -83,6 +83,8 @@ const checkIfFileAllowed = (req: Request): boolean => {
 
 const sendFile = (req: Request, res: Response) => {
 	res.set("Content-Type", getContentType(req.url));
+	if (!req.url.match(/.(html|txt|xml)/))
+		res.set("Cache-control", "public, max-age=31536000");
 	res.sendFile(DIST_DIR + req.url);
 };
 
