@@ -6,6 +6,7 @@
 
 @use "../../styles/colors" as colors;
 @use "../../styles/variables" as variables;
+@use "../../styles/media-queries" as mediaQueries;
 
 .footer {
 	background-color: colors.$primary-dark;
@@ -13,6 +14,12 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
+	@include mediaQueries.phone() {
+		flex-direction: column-reverse;
+		min-height: 120px;
+		padding: 12px 0;
+	}
 
 	.row1,
 	.row2 {
@@ -41,5 +48,10 @@
 		flex-grow: 0.1;
 		display: flex;
 		justify-content: space-between;
+
+		@include mediaQueries.phone() {
+			max-width: unset;
+			min-width: 50%;
+		}
 	}
 }
