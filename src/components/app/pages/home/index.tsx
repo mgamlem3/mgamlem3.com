@@ -63,7 +63,7 @@ const HomeContent: React.FunctionComponent = () => {
 							target='_blank'
 							rel='nooopener noreferrer'
 						>
-							<h2>Download my resumé...</h2>
+							<h2>Download my résumé...</h2>
 						</a>
 					</div>
 					<div className={styles.row2}>
