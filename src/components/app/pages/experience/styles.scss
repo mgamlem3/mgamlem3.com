@@ -6,7 +6,7 @@
 
 @use "../../../../styles/colors" as colors;
 @use "../../../../styles/variables" as variables;
-@use "../../../../styles/media-queries" as media-queries;
+@use "../../../../styles/media-queries" as mediaQueries;
 
 .experience {
 	display: flex;
@@ -73,6 +73,10 @@
 			div.backgroundBox {
 				padding: 10px 16px 10px 16px;
 				margin-left: 10px;
+
+				@include mediaQueries.phone() {
+					margin-right: 10px;
+				}
 			}
 		}
 	}
@@ -80,6 +84,10 @@
 	.work {
 		@include section;
 		height: 90vh;
+
+		@include mediaQueries.phone() {
+			height: 800px;
+		}
 
 		.backgroundImage {
 			@include backgroundImage;
@@ -104,6 +112,10 @@
 			div.backgroundBox {
 				padding: 10px 16px 10px 16px;
 				margin-left: 10px;
+
+				@include mediaQueries.phone() {
+					margin-right: 10px;
+				}
 
 				h2 {
 					margin-bottom: 0;

@@ -6,7 +6,7 @@
 
 @use "../../../../styles/colors" as colors;
 @use "../../../../styles/variables" as variables;
-@use "../../../../styles/media-queries" as media-queries;
+@use "../../../../styles/media-queries" as mediaQueries;
 
 .projects {
 	h1 {
@@ -65,6 +65,7 @@
 		.backgroundImage {
 			@include variables.background-image();
 			background-image: url("../../../../../public/images/mine/bp-bridge.jpg");
+			transform: translateZ(-1px) translateY(0px) scale(1.1);
 		}
 	}
 
@@ -77,6 +78,10 @@
 			@include variables.background-image();
 			background-image: url("../../../../../public/images/mine/trees.jpg");
 			transform: translateZ(-1px) translateY(60px) scale(1.1);
+
+			@include mediaQueries.phone() {
+				transform: translateZ(-1px) translateY(8px) scale(1.01);
+			}
 		}
 	}
 }

@@ -6,7 +6,7 @@
 
 @use "../../../../styles/colors" as colors;
 @use "../../../../styles/variables" as variables;
-@use "../../../../styles/media-queries" as media-queries;
+@use "../../../../styles/media-queries" as mediaQueries;
 
 .hero {
 	display: flex;
@@ -48,10 +48,18 @@
 		font-weight: bolder;
 		letter-spacing: 4px;
 		text-transform: uppercase;
+
+		@include mediaQueries.phone() {
+			font-size: 44px;
+		}
 	}
 
 	h2 {
 		max-width: 45%;
+
+		@include mediaQueries.phone() {
+			font-size: 26px;
+		}
 	}
 }
 
@@ -86,6 +94,10 @@
 			overflow: hidden;
 			z-index: 2;
 
+			@include mediaQueries.phone() {
+				display: none;
+			}
+
 			img {
 				width: 100%;
 				border-radius: 300px;
@@ -98,11 +110,29 @@
 			display: flex;
 			flex-direction: column;
 
+			@include mediaQueries.phone() {
+				max-width: 100%;
+			}
+
 			h2 {
 				@include variables.background-box;
 				width: fit-content;
 				align-self: center;
 				padding: 10px 16px 4px 16px;
+			}
+
+			.phoneImageContainer {
+				display: none;
+
+				@include mediaQueries.phone() {
+					display: flex;
+					justify-content: center;
+					
+					img {
+						width: 30%;
+						border-radius: 300px;
+					}
+				}
 			}
 
 			.factsList {

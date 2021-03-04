@@ -37,6 +37,13 @@ const HomeContent: React.FunctionComponent = () => {
 						</div>
 						<div className={styles.textContainer}>
 							<h2>Quick facts</h2>
+							<div className={styles.phoneImageContainer}>
+								<img
+									src={Profile}
+									loading='lazy'
+									alt='Michael Gamlem III'
+								/>
+							</div>
 							<ul className={styles.facetList}>
 								<li>Frontend and backend web developer</li>
 								<li>
