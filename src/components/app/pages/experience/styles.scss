@@ -45,8 +45,114 @@
 		@include variables.background-box();
 	}
 
+	.work {
+		@include section;
+		height: fit-content;
+
+		@include mediaQueries.phone() {
+			min-height: 700px;
+		}
+
+		.backgroundImage {
+			@include backgroundImage;
+
+			/* Patrick Fore / Faithlife Corporation, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons */
+			background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Bellingham_Flatiron_Building.png");
+			background-position-y: 15px;
+		}
+
+		.colorOverlay {
+			@include colorOverlay;
+
+			filter: opacity(0.7);
+		}
+
+		.content {
+			margin: 0 10%;
+			z-index: 10;
+
+			.textContainer {
+				display: flex;
+				flex-wrap: wrap;
+				width: 90vw;
+				justify-content: center;
+
+				@include mediaQueries.tablet() {
+					flex-direction: column;
+				}
+			}
+
+			.productContainer {
+				margin-bottom: 5%;
+
+				@include mediaQueries.tablet() {
+					margin-bottom: 0;
+				}
+			}
+
+			.technologiesContainer {
+				margin-left: 5%;
+
+				@include mediaQueries.tablet() {
+					margin-left: 0;
+					margin-bottom: 12px;
+				}
+			}
+
+			.backgroundBox {
+				@include variables.background-box();
+			}
+
+			h2 {
+				margin-bottom: 0;
+				text-align: left;
+			}
+
+			.subhead {
+				font-family: variables.$theme-font-body;
+				font-style: italic;
+				text-align: left;
+				margin: 0 0 0 10px;
+			}
+
+			.productSection {
+				margin-left: 10px;
+
+				.productHead {
+					margin: 10px 0 0 0;
+				}
+
+				.productListContainer {
+					display: flex;
+
+					ul {
+						li {
+							margin: 8px 0;
+						}
+					}
+				}
+
+				.productLink {
+					text-decoration: underline;
+					margin-bottom: 8px;
+				}
+			}
+		}
+
+		.slideshowContainer {
+			display: flex;
+			justify-content: center;
+			width: 90vw;
+			margin-bottom: 22px;
+		}
+	}
+
 	.education {
 		@include section;
+
+		@include mediaQueries.phone() {
+			min-height: 500px;
+		}
 
 		.backgroundImage {
 			@include backgroundImage;
@@ -76,74 +182,6 @@
 
 				@include mediaQueries.phone() {
 					margin-right: 10px;
-				}
-			}
-		}
-	}
-
-	.work {
-		@include section;
-		height: 90vh;
-
-		@include mediaQueries.phone() {
-			height: 800px;
-		}
-
-		.backgroundImage {
-			@include backgroundImage;
-
-			/* Patrick Fore / Faithlife Corporation, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons */
-			background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Bellingham_Flatiron_Building.png");
-			background-position-y: 50px;
-		}
-
-		.colorOverlay {
-			@include colorOverlay;
-		}
-
-		.content {
-			margin: 5% 0 0 10%;
-			z-index: 10;
-
-			.backgroundBox {
-				@include variables.background-box();
-			}
-
-			div.backgroundBox {
-				padding: 10px 16px 10px 16px;
-				margin-left: 10px;
-
-				@include mediaQueries.phone() {
-					margin-right: 10px;
-				}
-
-				h2 {
-					margin-bottom: 0;
-					text-align: left;
-				}
-
-				.subhead {
-					font-family: variables.$theme-font-body;
-					font-style: italic;
-					text-align: left;
-					margin: 0 0 0 10px;
-				}
-
-				.productSection {
-					margin-left: 10px;
-
-					.productHead {
-						margin: 10px 0 0 0;
-					}
-
-					.productListContainer {
-						display: flex;
-					}
-
-					.productLink {
-						text-decoration: underline;
-						margin-bottom: 8px;
-					}
 				}
 			}
 		}
