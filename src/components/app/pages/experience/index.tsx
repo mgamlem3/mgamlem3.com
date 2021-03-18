@@ -126,7 +126,7 @@ const ExperienceContent: React.FunctionComponent = () => {
 				<div className={styles.colorOverlay} />
 				<div className={styles.content}>
 					<h1 className={styles.backgroundBox}>Education</h1>
-					<div className={styles.backgroundBox}>
+					<div className={styles.educationContent}>
 						<h2>
 							Whitworth University: Computer Science - Networking
 							Systems B.A.
