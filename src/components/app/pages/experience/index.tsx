@@ -32,7 +32,7 @@ const ExperienceContent: React.FunctionComponent = () => {
 							</div>
 							<div className={styles.productSection}>
 								<div className={styles.productHead}>
-									Products worked on:
+									Some of the products I worked on:
 								</div>
 								<div className={styles.productListContainer}>
 									<ul className={styles.productList}>
@@ -133,7 +133,7 @@ const ExperienceContent: React.FunctionComponent = () => {
 						</h2>
 						<ul>
 							<li>Class of 2019</li>
-							<li>suma cum laude</li>
+							<li>summa cum laude</li>
 							<li>
 								Outstanding Computer Science Graduate (1 of 3
 								selected)
