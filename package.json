@@ -9,7 +9,7 @@
 	"scripts": {
 		"dev": "webpack serve",
 		"prebuild": "yarn prettier-check && yarn eslint && yarn stylelint-check",
-		"build": "rm -rf dist && webpack --mode production --config webpack.prod.config.js && webpack --mode production --config webpack.server.config.js",
+		"build": "rm -rf dist && webpack --mode production --config webpack.prod.config.js",
 		"test": "yarn prettier-check; yarn build",
 		"start": "node ./dist/server.*.wp.js",
 		"prettier": "prettier --config ./.prettierrc --ignore-path  ./.prettierignore --write \"**/*.ts*\" \"**/*.js\" \"**/*.scss\" \"*.json\" \"*.md\"",

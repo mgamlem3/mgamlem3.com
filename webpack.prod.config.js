@@ -6,6 +6,7 @@
 
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
+const nodeExternals = require("webpack-node-externals");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
@@ -13,11 +14,11 @@ const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
-const compressionRegex = /\.(js|png|jpg|html|css)$/;
+const compressionRegex = /\.(js|png|jpg|css)$/;
 
 module.exports = {
 	mode: "production",
-	entry: path.join(__dirname, "/src/index.tsx"),
+	entry: path.join(__dirname, "/server/server.tsx"),
 	module: {
 		rules: [
 			{
@@ -26,7 +27,7 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.(s*)css$/,
+				test: /\.(s?)css$/,
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader,
@@ -43,8 +44,15 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(jpg|png|ico)$/,
+				test: /\.(jpg|png)$/,
 				loader: "file-loader",
+			},
+			{
+				test: /\.(xml|txt)$/,
+				loader: "file-loader",
+				options: {
+					name: "[name].[ext]",
+				},
 			},
 		],
 	},
@@ -55,8 +63,12 @@ module.exports = {
 		globalObject: "this",
 		path: path.resolve(__dirname, "dist/"),
 		publicPath: "/",
-		filename: "main.[contenthash].wp.js",
+		filename: "server.[contenthash].wp.js",
 		chunkFilename: "[contenthash].js",
+	},
+	externals: [nodeExternals()],
+	node: {
+		__dirname: false,
 	},
 	optimization: {
 		splitChunks: {
