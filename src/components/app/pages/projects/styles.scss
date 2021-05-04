@@ -43,13 +43,15 @@
 		background-image: url("../../../../../public/images/mine/bp-bridge.jpg");
 	}
 
-	h1, h2 {
+	h1,
+	h2 {
 		@include variables.background-box();
 
 		margin-top: 40px;
 	}
 
-	.current, .previous {
+	.current,
+	.previous {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
