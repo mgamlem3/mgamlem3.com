@@ -10,6 +10,8 @@ import Profile from "../../../../../public/images/mine/profile.jpg";
 import { Routes } from "../../routes";
 import { Link } from "react-router-dom";
 
+import Spokane from "../../../../../public/images/other/SpokaneFromPalisades.jpg";
+
 import styles from "./styles.scss";
 
 const HomeContent: React.FunctionComponent = () => {
@@ -29,10 +31,21 @@ const HomeContent: React.FunctionComponent = () => {
 					<div className={styles.colorOverlay} />
 					<div className={styles.row1}>
 						<div className={styles.imageContainer}>
-							<img src={Profile} loading='lazy' />
+							<img
+								src={Profile}
+								loading='lazy'
+								alt='Michael Gamlem III'
+							/>
 						</div>
 						<div className={styles.textContainer}>
 							<h2>Quick facts</h2>
+							<div className={styles.phoneImageContainer}>
+								<img
+									src={Profile}
+									loading='lazy'
+									alt='Michael Gamlem III'
+								/>
+							</div>
 							<ul className={styles.facetList}>
 								<li>Frontend and backend web developer</li>
 								<li>
@@ -47,10 +60,11 @@ const HomeContent: React.FunctionComponent = () => {
 					</div>
 				</section>
 				<section className={styles.moreInfo}>
-					{/* Background photo credit: Mark Wagner / CC BY (https://https://creativecommons.org/licenses/by/2.5/deed.en) */}
+					{/* Background photo credit: Mark Wagner / CC BY (https://creativecommons.org/licenses/by/2.5/deed.en) */}
 					<img
-						src='https://upload.wikimedia.org/wikipedia/commons/7/7d/SpokaneFromPalisades_20070614.jpg'
+						src={Spokane}
 						className={styles.backgroundImage}
+						alt='View of Spokane, WA'
 					/>
 					<div className={styles.row1}>
 						<a
@@ -58,7 +72,7 @@ const HomeContent: React.FunctionComponent = () => {
 							target='_blank'
 							rel='nooopener noreferrer'
 						>
-							<h2>Download my resumé...</h2>
+							<h2>Download my résumé...</h2>
 						</a>
 					</div>
 					<div className={styles.row2}>

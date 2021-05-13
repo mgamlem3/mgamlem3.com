@@ -6,77 +6,96 @@
 
 @use "../../../../styles/colors" as colors;
 @use "../../../../styles/variables" as variables;
-@use "../../../../styles/media-queries" as media-queries;
 
 .projects {
-	h1 {
-		@include variables.background-box();
-		text-align: left;
-		margin-left: 6%;
-		align-self: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 100vh;
+	z-index: 50;
+
+	.colorOverlay {
+		@include variables.color-overlay();
+		filter: opacity(0.7);
+		position: fixed;
 	}
 
+	.hello {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 70%;
+
+		.subhead {
+			margin: 30px 0;
+			font-size: variables.$font-size-h3;
+			text-align: center;
+			font-style: italic;
+		}
+	}
+
+	.backgroundImage {
+		@include variables.background-image();
+		transform: none;
+		position: fixed;
+
+		background-image: url("../../../../../public/images/mine/bp-bridge.jpg");
+	}
+
+	h1,
 	h2 {
 		@include variables.background-box();
-		padding-top: 6px;
+
+		margin-top: 40px;
 	}
 
-	h3 {
-		margin: 0;
+	.current,
+	.previous {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.project {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 10vh;
+		max-width: 70%;
 
-		* {
-			z-index: 10;
-			color: colors.$text-light;
-		}
-
-		.projectHead {
+		.head {
 			@include variables.background-box();
 			background-color: colors.$primary;
+
 			display: flex;
 			align-items: center;
 			padding: 10px 16px 6px 16px;
 			margin: 32px 0 20px 0;
+
+			h3 {
+				margin: 0;
+			}
 		}
 
 		.description {
-			@include variables.background-box();
-			max-width: 60vw;
-			display: flex;
-			align-items: center;
+			max-width: 80%;
+
+			.text {
+				text-align: center;
+			}
 
 			.list {
-				margin-top: 16px;
+				margin-top: 10px;
+
+				li {
+					margin: 6px 0;
+
+					a {
+						text-decoration: underline;
+					}
+				}
 			}
-		}
-	}
-
-	.current {
-		.colorOverlay {
-			@include variables.color-overlay();
-		}
-
-		.backgroundImage {
-			@include variables.background-image();
-			background-image: url("../../../../../public/images/mine/bp-bridge.jpg");
-		}
-	}
-
-	.previous {
-		.colorOverlay {
-			@include variables.color-overlay();
-		}
-
-		.backgroundImage {
-			@include variables.background-image();
-			background-image: url("../../../../../public/images/mine/trees.jpg");
-			transform: translateZ(-1px) translateY(60px) scale(1.1);
 		}
 	}
 }

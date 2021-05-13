@@ -1,0 +1,23 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+@use "../../styles/variables" as variables;
+@use "../../styles/media-queries" as mediaQueries;
+
+.slideshow {
+	max-width: 50vw;
+	border-radius: variables.$border-radius;
+	overflow: hidden;
+	margin: 0 10% 0 5%;
+
+	@include mediaQueries.phone() {
+		max-width: 80vw;
+	}
+
+	img {
+		width: 100%;
+	}
+}

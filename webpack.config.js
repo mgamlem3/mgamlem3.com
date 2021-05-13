@@ -13,6 +13,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
 	mode: "development",
 	entry: path.join(__dirname, "/src/index.tsx"),
+	devtool: "source-map",
 	module: {
 		rules: [
 			{
@@ -23,7 +24,9 @@ module.exports = {
 			{
 				test: /\.(s*)css$/,
 				use: [
-					"style-loader",
+					{
+						loader: MiniCssExtractPlugin.loader,
+					},
 					{
 						loader: "css-loader",
 						options: {
@@ -36,7 +39,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(jpg|png)$/,
+				test: /\.(jpg|png|ico)$/,
 				loader: "file-loader",
 			},
 		],
@@ -63,9 +66,10 @@ module.exports = {
 			title: "mgamlem3.com",
 			minify: true,
 			template: "./public/index.html",
+			favicon: "./public/favicon.ico",
 		}),
 		new MiniCssExtractPlugin({
-			filename: "[hash].css",
+			filename: "[contenthash].css",
 			chunkFilename: "[id].css",
 			ignoreOrder: false,
 		}),
