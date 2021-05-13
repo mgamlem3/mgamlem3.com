@@ -13,7 +13,7 @@ import "../public/favicon-32x32.png";
 import { BrowserRouter } from "react-router-dom";
 
 if (typeof window !== "undefined") {
-	ReactDOM.render(
+	ReactDOM.hydrate(
 		<BrowserRouter>
 			<App />
 		</BrowserRouter>,
